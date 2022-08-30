@@ -1,5 +1,5 @@
-from telegram.ext import *
-
+from  telegram.ext import *
+import cresd
 import requests
 import json
 
@@ -29,7 +29,7 @@ def message(update, context):
 
     update.message.reply_text(res)
 
-updater = Updater(APIKEY, use_context=True)
+updater = Updater(cresd.APIKEY, use_context=True)
 
 dp = updater.dispatcher
 
